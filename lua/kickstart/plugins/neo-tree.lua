@@ -11,7 +11,17 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    {
+      '<Space>e',
+      function()
+        require('neo-tree.command').execute {
+          toggle = true,
+          source = 'filesystem',
+          position = 'right',
+        }
+      end,
+      desc = 'Filesystem (root dir)',
+    },
   },
   opts = {
     filesystem = {
@@ -19,6 +29,7 @@ return {
         mappings = {
           ['\\'] = 'close_window',
         },
+        position = 'right',
       },
     },
   },
