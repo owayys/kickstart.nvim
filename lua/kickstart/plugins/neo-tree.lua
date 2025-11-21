@@ -12,7 +12,7 @@ return {
   lazy = false,
   keys = {
     {
-      '<Space>e',
+      '<Space>E',
       function()
         require('neo-tree.command').execute {
           toggle = true,
@@ -21,6 +21,11 @@ return {
         }
       end,
       desc = 'Filesystem (root dir)',
+    },
+    {
+      '<Space>e',
+      '<C-w>w',
+      desc = 'Focus Filesystem (root dir)',
     },
   },
   opts = {
